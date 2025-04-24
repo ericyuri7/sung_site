@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
     color: white;
     font-size: 16px;
     overflow: hidden;
@@ -34,12 +34,17 @@ header {
             display: grid;
             grid-template-columns: repeat(3, 200px);
             cursor: pointer;
+
+            & li:nth-child(3) a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
+
 }
 
 section {
-    background-image: radial-gradient(#7f3d9e, #6d00d9);
     height: 100vh;
     position: relative;
 
@@ -134,7 +139,7 @@ section {
     }
 
     .caixa-setas {
-        width: 90vw;
+        width: 95vw;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -284,12 +289,13 @@ section {
 
 @media (max-width: 768px) {
     header {
-      width: 100%;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
   
     header nav ul {
@@ -306,33 +312,36 @@ section {
         position: absolute;
         text-align: center;
         font-size: 70%;
-        margin-top: 250px;
+        margin-top: 350px;
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
     }
 
+   
     .caixa-indicadores{
-        position: absolute;
-        font-size: 40%;
-        margin-top: -80px;
+        font-size: 9px;
+        
     }
     
-    
+    .caixa-imagem{
+        width: 120vh;
+    }
+
     .caixa-imagem {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%) translateX(50%);
-        width: 190%; /* Ajuste o tamanho do contêiner */
-    }
+        position: relative;
+        width: 100% !important;
+        max-width: 200px ;
+        left: -15%;
+        top: 50% ;
+        transform: translateX(-50%);
+
+      }
     
     .caixa-imagem img {
-        width: 100%; /* Altere de 300% para 100% para a imagem ocupar 100% do contêiner */
-        height: auto; /* Ajuste a altura automaticamente para manter a proporção */
-    }
-    
-
-        
-}     
+        width: 100% !important;
       
+    }
+
+}     
 
